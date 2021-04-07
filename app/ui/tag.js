@@ -2,6 +2,8 @@ const { ipcRenderer } = require("electron");
 
 const tagForm = document.querySelector("#tagForm");
 const tagSelect = document.querySelector("#tagSelect");
+const tagCodeSelect = document.querySelector("#tagCodeSelect");
+const relatedTagSelect = document.querySelector("#relatedTagSelect");
 const tagList = document.querySelector("#tagList");
 
 let updateStatus = false;
@@ -26,8 +28,9 @@ function renderTags(tags) {
   tagList.innerHTML = `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">Tags</th>
-          <th style="width:200px; display:inline-block; overflow:hidden"></th>
+          <th style="width:100px; display:inline-block; overflow:hidden">Tag Name</th>
+          <th style="width:100px; display:inline-block; overflow:hidden">Tag Code</th>
+          <th style="width:120px; display:inline-block; overflow:hidden">Related Tag</th>
           </tr>
         </thead>
         </table>
@@ -39,6 +42,8 @@ function renderTags(tags) {
     <tbody>
       <tr>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.tagSelect}</td>
+        <td style="width:100px; display:inline-block; overflow:hidden">${t.tagCodeSelect}</td>
+        <td style="width:100px; display:inline-block; overflow:hidden">${t.relatedTagSelect}</td>
         <td style="width:200px; display:inline-block; overflow:hidden">
         <button class="btn btn-btn btn-outline-success" onclick="editTag('${t._id}')">
        Edit
@@ -64,6 +69,8 @@ tagForm.addEventListener("submit", async (e) => {
 
   const tag = {
     tagSelect: tagSelect.value,
+    tagCodeSelect: tagCodeSelect.value,
+    relatedTagSelect:relatedTagSelect.value,
   };
   console.log("updateStatus");
   console.log(updateStatus);

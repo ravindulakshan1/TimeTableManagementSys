@@ -4,6 +4,12 @@ const newTagSchema = new Schema({
   tagSelect: {
     type: String,
   },
+  tagCodeSelect: {
+    type: String,
+  },
+  relatedTagSelect: {
+    type: String,
+  },
   
 })
 

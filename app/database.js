@@ -1,8 +1,17 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://user:123@electronttm.zal8h.mongodb.net/time_table?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-  .then(db => console.log('DB is connected'))
-  .catch(err => console.log(err));
+mongoose.Promise = global.Promise;
+
+const url = "mongodb+srv://ttUser:tt123@cluster0.nj283.mongodb.net/DB1?retryWrites=true&w=majority"
+// Connect MongoDB at default port 27017.
+let mong = mongoose.connect(url, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+}, (err) => {
+    if (!err) {
+        console.log('MongoDB Connection Succeeded.')
+    } else {
+        console.log('Error in DB connection: ' + err)
+    }
+});

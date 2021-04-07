@@ -1001,7 +1001,7 @@ textarea {
   width: 100%; }
 
 aside.left-panel {
-  background: #272c33;
+  background: #adb0b4;
   display: table-cell;
   height: 100vh;
   min-height: 100%;
@@ -1012,7 +1012,7 @@ aside.left-panel {
   transition: width 0.3s ease; }
 
 .navbar {
-  background: #272c33;
+  background: #adb0b4;
   border-radius: 0;
   border: none;
   display: block;
@@ -1052,8 +1052,8 @@ aside.left-panel {
     .navbar .navbar-brand.hidden {
       display: none; }
   .navbar .menu-title {
-    border-bottom: 1px solid #4e4e52;
-    color: #9496a1;
+    border-bottom: 1px solid #4e4e52;  
+    color: #1c1d20;
     clear: both;
     display: block;
     font-family: 'Open Sans';
@@ -1071,12 +1071,12 @@ aside.left-panel {
       .navbar .navbar-nav li.active .menu-icon,
       .navbar .navbar-nav li:hover .toggle_nav_button:before,
       .navbar .navbar-nav li .toggle_nav_button.nav-open:before {
-        color: #fff !important; }
+        color: #272c33 !important; }
       .navbar .navbar-nav li .dropdown-toggle:after {
         display: none; }
       .navbar .navbar-nav li > a {
         background: none !important;
-        color: #c8c9ce !important;
+        color: #26272b !important;
         display: inline-block;
         font-family: 'Open Sans';
         font-size: 14px;
@@ -1088,7 +1088,7 @@ aside.left-panel {
         .navbar .navbar-nav li > a:hover .menu-icon {
           color: #fff !important; }
         .navbar .navbar-nav li > a .menu-icon {
-          color: #8b939b;
+          color: #26272b;
           float: left;
           margin-top: 8px;
           width: 55px;
@@ -1109,7 +1109,7 @@ aside.left-panel {
           line-height: 30px; }
           .navbar .navbar-nav li.menu-item-has-children a:before {
             content: "\f105";
-            color: #c8c9ce;
+            color: #26272b;
             font-family: 'Fontawesome';
             font-size: 16px;
             position: absolute;
@@ -1156,7 +1156,7 @@ aside.left-panel {
 .navbar .navbar-nav > .active > a,
 .navbar .navbar-nav > .active > a:focus,
 .navbar .navbar-nav > .active > a:hover {
-  color: #d7d9e3 !important; }
+  color: #272c33 !important; }
 
 .navbar-nav li span.count {
   background: #a9d86e;
