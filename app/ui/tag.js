@@ -28,8 +28,9 @@ function renderTags(tags) {
   tagList.innerHTML = `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">Tags</th>
-          <th style="width:200px; display:inline-block; overflow:hidden"></th>
+          <th style="width:100px; display:inline-block; overflow:hidden">Tag Name</th>
+          <th style="width:100px; display:inline-block; overflow:hidden">Tag Code</th>
+          <th style="width:120px; display:inline-block; overflow:hidden">Related Tag</th>
           </tr>
         </thead>
         </table>
