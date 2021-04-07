@@ -40,7 +40,8 @@ function renderStudents(students) {
           </tr>
         </thead>
         </table>
-  `;
+  `
+  ;
   console.log(students);
   students.map((t) => {
     studentList.innerHTML += `
@@ -54,20 +55,25 @@ function renderStudents(students) {
         <td style="width:250px; display:inline-block; overflow:hidden">
         <button class="btn btn-btn btn-outline-success" onclick="editStudent('${t._id}')">
        Edit
-    </button>
+      </button>
         <button class="btn btn-btn btn-outline-danger" onclick="deleteStudent('${t._id}')">
         Delete
       </button>
-    </td>
+      </td>
       </tr>
-      <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">Group ID</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">Sub Group ID</th>
-          </tr>
+    </tbody>  
+</table>
+<table class="table table-striped">
+<tbody>
+<tr>
+<th style="width:100px; display:inline-block; overflow:hidden">Group ID</th>
+<th style="width:100px; display:inline-block; overflow:hidden">Sub Group ID</th>
+</tr>
       <tr>
       <td style="width:100px; display:inline-block; overflow:hidden">${t.year}.${t.programme}.${t.group_count}</td>
       <td style="width:100px; display:inline-block; overflow:hidden">${t.year}.${t.programme}.${t.group_count}.${t.sub_group_count}</td>
       </tr>
+</tbody>      
 </table>
         `;
   });
