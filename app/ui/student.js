@@ -34,32 +34,46 @@ function renderStudents(students) {
           <tr>
           <th style="width:100px; display:inline-block; overflow:hidden">Year</th>
           <th style="width:100px; display:inline-block; overflow:hidden">Programme</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">Count</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">S-Count</th>
+          <th style="width:130px; display:inline-block; overflow:hidden">Group Number</th>
+          <th style="width:140px; display:inline-block; overflow:hidden">Sub Group Number</th>
           <th style="width:100px; display:inline-block; overflow:hidden"></th>
           </tr>
         </thead>
         </table>
-  `;
+  `
+  ;
   console.log(students);
   students.map((t) => {
     studentList.innerHTML += `
     <table class="table table-striped">
     <tbody>
       <tr>
-        <td style="width:100px; display:inline-block; overflow:hidden">${t.year}.${t.group_count}</td>
+        <td style="width:100px; display:inline-block; overflow:hidden">${t.year}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.programme}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.group_count}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.sub_group_count}</td>
         <td style="width:250px; display:inline-block; overflow:hidden">
         <button class="btn btn-btn btn-outline-success" onclick="editStudent('${t._id}')">
        Edit
-    </button>
+      </button>
         <button class="btn btn-btn btn-outline-danger" onclick="deleteStudent('${t._id}')">
         Delete
       </button>
-    </td>
+      </td>
       </tr>
+    </tbody>  
+</table>
+<table class="table table-striped">
+<tbody>
+<tr>
+<th style="width:100px; display:inline-block; overflow:hidden">Group ID</th>
+<th style="width:100px; display:inline-block; overflow:hidden">Sub Group ID</th>
+</tr>
+      <tr>
+      <td style="width:100px; display:inline-block; overflow:hidden">${t.year}.${t.programme}.${t.group_count}</td>
+      <td style="width:100px; display:inline-block; overflow:hidden">${t.year}.${t.programme}.${t.group_count}.${t.sub_group_count}</td>
+      </tr>
+</tbody>      
 </table>
         `;
   });
@@ -120,7 +134,7 @@ ipcRenderer.on("new-student-created", (e, arg) => {
   students.push(studentSaved);
   console.log(students);
   renderStudents(students);
-  alert("New Batch Created Successfully");
+  alert("New Group Created Successfully");
   studentName.focus();
 });
 
