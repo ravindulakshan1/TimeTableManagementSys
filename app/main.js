@@ -618,7 +618,10 @@ ipcMain.on("new-lecturer", async (e, arg) => {
     console.log(args);
     const updatedTag = await Tag.findByIdAndUpdate(
       args.idTagToUpdate,
-      { tagSelect: args.tagSelect},
+      { tagSelect: args.tagSelect,
+        tagCodeSelect: args.tagCodeSelect,
+        relatedTagSelect: args.relatedTagSelect
+        },
       { new: true }
     );
     e.reply("update-tag-success", JSON.stringify(updatedTag));
