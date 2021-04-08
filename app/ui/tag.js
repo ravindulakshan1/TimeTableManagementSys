@@ -22,6 +22,8 @@ function editTag(id) {
   idTagToUpdate = id;
   const tag = tags.find((tag) => tag._id === id);
   tagSelect.value = tag.tagSelect;
+  tagCodeSelect.value = tag.tagCodeSelect;
+  relatedTagSelect.value = tag.relatedTagSelect;
 }
 
 function renderTags(tags) {
@@ -115,6 +117,8 @@ ipcRenderer.on("update-tag-success", (e, args) => {
   tags = tags.map((t, i) => {
     if (t._id === updatedTag._id) {
       t.tagSelect = updatedTag.tagSelect;
+      t.tagCodeSelect = updatedTag.tagCodeSelect;
+      t.relatedTagSelect = updatedTag.relatedTagSelect;
     }
     return t;
   });

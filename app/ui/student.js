@@ -71,7 +71,7 @@ function renderStudents(students) {
 </tr>
       <tr>
       <td style="width:100px; display:inline-block; overflow:hidden">${t.year}.${t.programme}.${t.group_count}</td>
-      <td style="width:100px; display:inline-block; overflow:hidden">${t.year}.${t.programme}.${t.group_count}.${t.sub_group_count}</td>
+      <td style="width:110px; display:inline-block; overflow:hidden">${t.year}.${t.programme}.${t.group_count}.${t.sub_group_count}</td>
       </tr>
 </tbody>      
 </table>
