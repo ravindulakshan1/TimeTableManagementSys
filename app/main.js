@@ -39,6 +39,8 @@ function createWindow() {
     win.loadFile("app/index.html");
 }
 
+// location-building
+
 ipcMain.on("new-task", async (e, arg) => {
     const newTask = new Task(arg);
     const taskSaved = await newTask.save();
@@ -66,6 +68,8 @@ ipcMain.on("update-task", async (e, args) => {
     );
     e.reply("update-task-success", JSON.stringify(updatedTask));
 });
+
+// rooms
 
 ipcMain.on("new-room", async (e, arg) => {
     const newRoom = new Room(arg);
@@ -100,6 +104,8 @@ ipcMain.on("update-room", async (e, args) => {
     e.reply("update-room-success", JSON.stringify(updatedRoom));
 });
 
+// students
+
 ipcMain.on("new-student", async (e, arg) => {
     const newStudent = new Student(arg);
     const studentSaved = await newStudent.save();
@@ -133,6 +139,8 @@ ipcMain.on("update-student", async (e, args) => {
     e.reply("update-student-success", JSON.stringify(updatedStudent));
 });
 
+// working days
+
 ipcMain.on("new-workingd", async (e, arg) => {
     const newWorkingd = new Workingd(arg);
     const workingdSaved = await newWorkingd.save();
@@ -160,6 +168,8 @@ ipcMain.on("update-workingd", async (e, args) => {
     );
     e.reply("update-workingd-success", JSON.stringify(updatedWorkingd));
 });
+
+// min-30
 
 ipcMain.on("new-min30", async (e, arg) => {
     const newMin30 = new Min30(arg);
@@ -193,6 +203,8 @@ ipcMain.on("update-min30", async (e, args) => {
     );
     e.reply("update-min30-success", JSON.stringify(updatedMin30));
 });
+
+// Subjects
 
 ipcMain.on("new-module", async (e, arg) => {
     const newModule = new Module(arg);
@@ -236,6 +248,7 @@ ipcMain.on("update-module", async (e, args) => {
 });
 
 
+// min-60
 
 ipcMain.on("new-min60", async (e, arg) => {
     const newMin60 = new Min60(arg);
@@ -270,7 +283,7 @@ ipcMain.on("update-min60", async (e, args) => {
     e.reply("update-min60-success", JSON.stringify(updatedMin60));
 });
 
-
+// sessions
 
 ipcMain.on("new-session", async (e, arg) => {
     const newSession = new Session(arg);
@@ -302,7 +315,7 @@ ipcMain.on("update-session", async (e, args) => {
 
 
 
-
+// consecutive sessions
 
 ipcMain.on("new-consecs", async (e, arg) => {
     const newConsecs = new Consecs(arg);
@@ -332,10 +345,7 @@ ipcMain.on("update-consecs", async (e, args) => {
     e.reply("update-consecs-success", JSON.stringify(updatedConsecs));
 });
 
-
-
-
-
+// parallel sessions
 
 ipcMain.on("new-parallels", async (e, arg) => {
     const newParallels = new Parallels(arg);
@@ -365,9 +375,7 @@ ipcMain.on("update-parallels", async (e, args) => {
     e.reply("update-parallels-success", JSON.stringify(updatedParallels));
 });
 
-
-
-
+// not overlapping
 
 ipcMain.on("new-notov", async (e, arg) => {
     const newNotov = new Notov(arg);
@@ -397,6 +405,7 @@ ipcMain.on("update-notov", async (e, args) => {
     e.reply("update-notov-success", JSON.stringify(updatedNotov));
 });
 
+// not available group
 
 ipcMain.on("new-notavgro", async (e, arg) => {
     const newNotavgro = new Notavgro(arg);
@@ -426,12 +435,7 @@ ipcMain.on("update-notavgro", async (e, args) => {
     e.reply("update-notavgro-success", JSON.stringify(updatedNotavgro));
 });
 
-
-
-
-
-
-
+// 
 
 ipcMain.on("new-notavsgro", async (e, arg) => {
     const newNotavsgro = new Notavsgro(arg);
@@ -463,7 +467,7 @@ ipcMain.on("update-notavsgro", async (e, args) => {
 
 
 
-
+// not available lec
 
 
 ipcMain.on("new-notavlec", async (e, arg) => {
@@ -494,7 +498,7 @@ ipcMain.on("update-notavlec", async (e, args) => {
     e.reply("update-notavlec-success", JSON.stringify(updatedNotavlec));
 });
 
-
+// not available sessions
 
 
 ipcMain.on("new-notavses", async (e, arg) => {
@@ -515,10 +519,6 @@ ipcMain.on("delete-notavses", async (e, args) => {
     e.reply("delete-notavses-success", JSON.stringify(notavsesDeleted));
 });
 
-
-
-
-
 ipcMain.on("update-notavses", async (e, args) => {
     console.log(args);
     const updatedNotavses = await Notavses.findByIdAndUpdate(
@@ -536,7 +536,7 @@ ipcMain.on("update-notavses", async (e, args) => {
 });
 
 
-
+// working hours
 
 ipcMain.on("new-workingH", async (e, arg) => {
     const newWorkingH = new WorkingH(arg);
@@ -566,6 +566,7 @@ ipcMain.on("new-workingH", async (e, arg) => {
     e.reply("update-workingH-success", JSON.stringify(updatedWorkingH));
   });
 
+  // lecturer
 
 ipcMain.on("new-lecturer", async (e, arg) => {
     const newLecturer = new Lecturer(arg);
@@ -589,12 +590,20 @@ ipcMain.on("new-lecturer", async (e, arg) => {
     console.log(args);
     const updatedLecturer = await Lecturer.findByIdAndUpdate(
       args.idLecturerToUpdate,
-      { lecName: args.lecName, lecId: args.lecId, faculty: args.faculty, department: args.department, center: args.center, building: args.building, category: args.category},
+      { lecName: args.lecName, 
+        lecId: args.lecId, 
+        faculty: args.faculty, 
+        department: args.department, 
+        center: args.center, 
+        building: args.building, 
+        category: args.category
+        },
       { new: true }
     );
     e.reply("update-lecturer-success", JSON.stringify(updatedLecturer));
   });
 
+  // tags
 
   ipcMain.on("new-tag", async (e, arg) => {
     const newTag = new Tag(arg);
@@ -627,9 +636,7 @@ ipcMain.on("new-lecturer", async (e, arg) => {
     e.reply("update-tag-success", JSON.stringify(updatedTag));
   });
 
-
-
-  
+  // busy time
 
   ipcMain.on("new-busyTime", async (e, arg) => {
     const newBusyTime = new BusyTime(arg);
@@ -658,14 +665,6 @@ ipcMain.on("new-lecturer", async (e, arg) => {
     );
     e.reply("update-busyTime-success", JSON.stringify(updatedBusyTime));
   });
-
-
-
-
-
-
-
-
 
 
 
@@ -700,6 +699,7 @@ ipcMain.on("update-busytime", async (e, args) => {
 });
 
 
+// lecture room allocation
 
 ipcMain.on("new-lecroomalo", async (e, arg) => {
     const newLecroomalo = new Lecroomalo(arg);
@@ -730,7 +730,7 @@ ipcMain.on("update-lecroomalo", async (e, args) => {
 });
 
 
-
+// group room allocation
 
 ipcMain.on("new-grouproomalo1", async (e, arg) => {
     const newGrouproomalo1 = new Grouproomalo1(arg);
@@ -760,7 +760,7 @@ ipcMain.on("update-grouproomalo1", async (e, args) => {
     e.reply("update-grouproomalo1-success", JSON.stringify(updatedGrouproomalo1));
 });
 
-
+// group room allocation 2
 
 ipcMain.on("new-grouproomalo2", async (e, arg) => {
     const newGrouproomalo2 = new Grouproomalo2(arg);
@@ -792,7 +792,7 @@ ipcMain.on("update-grouproomalo2", async (e, args) => {
 
 
 
-
+// group room allocation 3
 
 ipcMain.on("new-grouproomalo3", async (e, arg) => {
     const newGrouproomalo3 = new Grouproomalo3(arg);
@@ -825,7 +825,7 @@ ipcMain.on("update-grouproomalo3", async (e, args) => {
 
 
 
-
+// working days
 
 
 ipcMain.on("new-workingday", async (e, arg) => {
@@ -858,7 +858,7 @@ ipcMain.on("update-workingday", async (e, args) => {
 
 
 
-
+// working time
 
 
 ipcMain.on("new-workingtime", async (e, arg) => {

@@ -42,6 +42,7 @@ function renderLecturers(lecturers) {
           <th style="width:100px; display:inline-block; overflow:hidden">LecName</th>
           <th style="width:100px; display:inline-block; overflow:hidden">dept</th>
           <th style="width:100px; display:inline-block; overflow:hidden">Building</th>
+          <th style="width:100px; display:inline-block; overflow:hidden">Rank</th>
           </tr>
         </thead>
         </table>
@@ -55,6 +56,8 @@ function renderLecturers(lecturers) {
         <td style="width:100px; display:inline-block; overflow:hidden">${t.lecName}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.department}</td>
         <td style="width:100px; display:inline-block; overflow:hidden">${t.building}</td>
+        <td style="width:100px; display:inline-block; overflow:hidden">${t.category}.${t.lecId}</td>
+
         <td style="width:200px; display:inline-block; overflow:hidden">
         <button class="btn btn-btn btn-outline-success" onclick="editLecturer('${t._id}')">
        Edit
@@ -160,7 +163,7 @@ ipcRenderer.on("update-lecturer-success", (e, args) => {
   });
   renderLecturers(lecturers);
 });
-
+/*
       t.lecName = updatedLecturer.lecName;
       t.lecId = updatedLecturer.lecId;
       t.faculty = updatedLecturer.faculty;
@@ -168,3 +171,4 @@ ipcRenderer.on("update-lecturer-success", (e, args) => {
       t.center = updatedLecturer.center;
       t.building = updatedLecturer.building;
       t.category = updatedLecturer.category;
+      */
