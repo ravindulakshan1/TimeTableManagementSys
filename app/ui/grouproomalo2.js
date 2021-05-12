@@ -87,7 +87,7 @@ ipcRenderer.on("new-grouproomalo2-created", (e, arg) => {
   grouproomalo2s.push(grouproomalo2Saved);
   console.log(grouproomalo2s);
   renderGrouproomalo2s(grouproomalo2s);
-  alert("Session Allocated Successfully");
+  alert("Room Allocated Successfully");
   grouproomalo2Name.focus();
 });
 
