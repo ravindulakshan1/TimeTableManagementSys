@@ -148,9 +148,9 @@ ipcRenderer.on("delete-lecturer-success", (e, args) => {
 
 ipcRenderer.on("update-lecturer-success", (e, args) => {
   updateStatus = false;
-  const updatedLecturers = JSON.parse(args);
+  const updatedLecturer = JSON.parse(args);
   lecturers = lecturers.map((t, i) => {
-    if (t._id === updatedLecturers._id) {
+    if (t._id === updatedLecturer._id) {
       t.lecName = updatedLecturer.lecName;
       t.lecId = updatedLecturer.lecId;
       t.faculty = updatedLecturer.faculty;
