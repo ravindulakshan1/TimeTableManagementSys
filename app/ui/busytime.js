@@ -129,7 +129,7 @@ ipcRenderer.on("new-busytime-created", (e, arg) => {
   busytimes.push(busytimeSaved);
   console.log(busytimes);
   renderBusytimes(busytimes);
-  alert("Busytime Created Successfully");
+  alert("room reserved Successfully");
   busytimeName.focus();
 });
 

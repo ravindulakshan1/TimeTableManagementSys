@@ -35,56 +35,63 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="images/LOGO.jpeg" alt="Logo"></a>
             <a class="navbar-brand hidden" href="index.html"><img src="images/logo2.png" alt="Logo"></a>
         </div>
 
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Home </a>
                 </li>
+                
                 <li class="main-menu">
-                    <a href="workingDays.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-briefcase"></i>Days & hours</a>
+                    <a href="workingDays.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-briefcase"></i>Working Days & hours</a>
                 </li>
+
+                <li class="main-menu">
+                    <a href="lecturerDetails.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-notepad"></i>Lecturers</a>
+                </li>
+
+                <li class="main-menu">
+                    <a href="subjectDetails.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-book"></i>Subjects</a>
+                </li>
+
+                <li class="main-menu">
+                    <a href="batchDetails.html"   aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-id-badge"></i>Students</a>
+                </li>
+
+                <li class="main-menu">
+                    <a href="bookmarks.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-pin-alt"></i>Tags</a>
+                </li>
+
+                <li class="main-menu">
+                    <a href="building.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Locations</a>
+                </li>
+
+                <li class="main-menu">
+                    <a href="generateStatistics.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-bar-chart"></i>Statistics</a>
+                </li>
+
+                <li class="main-menu">
+                    <a href="createSessions.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Sessions</a>
+                </li>
+
                 <li class="main-menu">
                     <a href="1hourSlot.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-timer"></i>Time Slots</a>
                 </li>
-                <li class="main-menu">
-                    <a href="batchDetails.html"   aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-id-badge"></i>Student</a>
-
-                </li>
-
-                <li class="main-menu">
-                    <a href="building.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Location</a>
-
-                </li>
+                
                 <li class="main-menu">
                     <a href="BusyTime.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-location-pin"></i>Room Allocate</a>
 
                 </li>
-                <li class="main-menu">
-                    <a href="lecturerDetails.html" class="dropdown-toggle"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-notepad"></i>Lecturers</a>
-
-                </li>
-                <li class="main-menu">
-                    <a href="createSessions.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Sessions</a>
-                </li>
+                
                 <li class="main-menu">
                     <a href="notAvLec.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-harddrives"></i>Invalid Time</a>
                 </li>
 
                 <li class="main-menu">
-                    <a href="subjectDetails.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-book"></i>Modules</a>
-                </li>
-                <li class="main-menu">
-                    <a href="generateStatistics.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-bar-chart"></i>Charts</a>
-                </li>
-                <li class="main-menu">
-                    <a href="bookmarks.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-pin-alt"></i>Tags</a>
-                </li>
-                <li class="main-menu">
-                    <a href="generate.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-share"></i>Generate</a>
+                    <a href="generate.html" class="dropdown-toggle" data-toggle="" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-share"></i>Generate Time Table</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -100,21 +107,24 @@
     <!-- Header-->
     <header id="header" class="header">
 
-        <div class="header-menu">
+       <div class="header-menu">
+           <!--
+           <div class="col-sm-7">
+               <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+               <div class="header-left">
+                   <button class="search-trigger"><i class="fa fa-search"></i></button>
+                   <div class="form-inline">
+                       <form class="search-form">
+                          <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search"> 
+                           <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                       </form>
+                   </div>
 
-            <div class="col-sm-7">
-                <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                <div class="header-left">
-                    <button class="search-trigger"><i class="fa fa-search"></i></button>
-                    <div class="form-inline">
-                        <form class="search-form">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                            <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+               </div>
+           </div>
+       -->
+       <h3>Time  Table Management System</h3>
+           </div>
     </header><!-- /header -->
     <!-- Header-->
 
@@ -122,7 +132,7 @@
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>Dashboard</h1>
+                    <h1>Not Available Times</h1>
                 </div>
             </div>
         </div>
@@ -130,7 +140,7 @@
             <div class="page-header float-right">
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
-                        <li class="active">Dashboard / Invalid Time / Sessions</li>
+                        <li class="active">Not Available Times / Sessions</li>
                     </ol>
                 </div>
             </div>
@@ -159,7 +169,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="card-header">
-                                                        <strong>Invalid time Sessions</strong>
+                                                        <strong>Not Available Times - Sessions</strong>
                                                     </div>
                                                     <div class="card-body card-block">
                                                         <form id="notavsesForm" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -169,9 +179,10 @@
                                                                 <div class="col-12 col-md-9">
                                                                     <select name="select" id="session" class="form-control" required>
                                                                         <option disabled>Select Session</option>
-                                                                        <option value="Computer Networks Lecture- CN - T12.30">Computer Networks Lecture- CN - T12.30</option>
-                                                                        <option value="Database System Lecture- CDS - T12.30">Database System Lecture- CDS - T12.30</option>
-                                                                        <option value="Introduction To Programming Lecture- CDS - T12.30">Introduction To Programming Lecture- CDS - T12.30</option>
+                                                                        <option value="Probability And Statistics Lecture- IT ">Probability And Statistics Lecture- IT </option>
+                                                                        <option value="Database Systems Lecture- DS ">Database Systems Lecture- DS </option>
+                                                                        <option value="Internet And Web Technology Lecture- IT ">Internet And Web Technology Lecture- IT </option>
+                                                                        <option value="Software Process Management Lecture- IT ">Software Process Management Lecture- IT </option>
                                                                     </select>
                                                                 </div>
                                                             </div>
