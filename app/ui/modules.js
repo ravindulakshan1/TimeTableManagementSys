@@ -203,7 +203,7 @@ ipcRenderer.on("get-modules", (e, args) => {
 
 ipcRenderer.on("delete-module-success", (e, args) => {
     const deletedModule = JSON.parse(args);
-    const newModules = tasks.filter((t) => {
+    const newModules = modules.filter((t) => {
         return t._id !== deletedModule._id;
     });
     modules = newModules;
